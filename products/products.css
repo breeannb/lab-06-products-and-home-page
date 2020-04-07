@@ -1,14 +1,13 @@
 #bugs {
     padding: 0;
-    display: ;
     flex-wrap: wrap;
 }
 
 #bugs li {
     list-style: none;
     position: relative;
-    background: white;
-    border: 1px solid #aaa;
+    background: steelblue;
+    border: 1px solid orange;
     border-radius: 5px;
     width: 300px;
     height: 400px;
@@ -16,7 +15,6 @@
     margin-bottom: 5px;
     text-align: center;
     box-shadow: 1px 1px 2px #ccc;
-    transition: transform 200ms ease-in-out;
 }
 
 #bugs li h1 {
