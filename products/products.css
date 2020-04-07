@@ -1,6 +1,38 @@
-div { 
+#bugs {
+    padding: 0;
+    display: ;
+    flex-wrap: wrap;
 }
 
-img { 
-    max-width: 250px;
+#bugs li {
+    list-style: none;
+    position: relative;
+    background: white;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    width: 300px;
+    height: 400px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    box-shadow: 1px 1px 2px #ccc;
+    transition: transform 200ms ease-in-out;
+}
+
+#bugs li h1 {
+    font-size: 1.1rem;
+    margin: 5px;
+}
+
+#bugs li img {
+    width: 50%;
+    margin-top: 10px;
+}
+
+#bugs p { 
+    text-align: center;
+}
+
+#bugs price { 
+    font: 10px;
 }
