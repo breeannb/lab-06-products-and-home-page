@@ -1,0 +1,25 @@
+
+#container { 
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+body {
+    font-family: 'Heebo', sans-serif;
+    background: #eee;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+}
+
+h1 {
+    font-family: 'Oswald';
+}
