@@ -18,7 +18,7 @@ const beetle = {
 
 const butterfly = {
     id: 'butterfly',
-    name: 'Morpho Butterfly Beetle',
+    name: 'Morpho Butterfly',
     image: './assets /butterfly.jpg',
     description: 'A description of the Morpho butterfly',
     category: 'bug-butterfly',
@@ -45,7 +45,7 @@ const dragonfly = {
 
 const mantis = {
     id: 'mantis',
-    name: 'Emperor Dragonfly',
+    name: 'Mantis',
     image: './assets /mantis.jpg',
     description: 'A description of the Praying Mantis',
     category: 'bug-mantis',
@@ -53,7 +53,7 @@ const mantis = {
 };
 
 const spider = {
-    id: 'mantis',
+    id: 'spider',
     name: 'Greenbottle Blue Trantula',
     image: './assets /spider.jpg',
     description: 'A description of the Tarantula',

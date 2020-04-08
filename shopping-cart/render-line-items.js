@@ -12,7 +12,6 @@ export function renderTableRow(cartItem, bug) {
 
     const thItemName = document.createElement('th');
     thItemName.textContent = bug.name;
-    console.log(bug, bug.name); 
     thItemName.classList.add('table');
 
     const thQuantity = document.createElement('th');

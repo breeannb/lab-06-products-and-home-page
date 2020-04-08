@@ -1,5 +1,5 @@
 import { renderTableRow } from '../shopping-cart/render-line-items.js'; 
-import bugs from '../data.js'; 
+// import bugs from '../data.js'; 
 import makeReadablePrice from '../shopping-cart/render-line-items.js';
 
 const test = QUnit.test;
