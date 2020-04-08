@@ -25,3 +25,4 @@ test('renders a bug', function(assert) {
     // Make assertions about what is expected valid result
     assert.equal(html, expected);
 });
+
