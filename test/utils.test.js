@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import findByID from '../common/utils.js';
-import calcLineItem from '../common/utils.js'; 
+import { calcLineItem } from '../common/utils.js'; 
 
 
 const test = QUnit.test;

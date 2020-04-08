@@ -10,7 +10,7 @@ const moth = {
 const beetle = {
     id: 'beetle',
     name: 'Rhinoceros Beetle',
-    image: './assets /beetle.jpg',
+    image: '../assets /beetle.jpg',
     description: 'A description of the Rhinoceros Beetle',
     category: 'bug-beetle',
     price: 15.00, 
