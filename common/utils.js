@@ -10,14 +10,35 @@ export default function findByID(arrayOfThings, id){
         }
     }
     //first item found that has an .id property that matches the passed in id. Also turn null if no match is found
-    return null; 
+
 }
 export function calcLineItem(quantity, price){ 
-    let lineTotal = quantity * price;
-    let roundTotal = Math.round(lineTotal * 100) / 100;
-    return roundTotal; 
+    const lineTotal = quantity * price;
+    return roundCurrency(lineTotal); 
+}
+
+export function toUSD(number) {
+    return number.toLocaleString('en-US', { 
+        style: 'currency', 
+        currency: 'USD' 
+    });
 }
 
 export function roundCurrency(lineTotal) {
     return Math.round(lineTotal * 100) / 100;
+}
+
+export function calcOrderTotal(cart, bugs) { 
+    // variable to hold order total 
+    let ordertTotal = 0; 
+
+    console.log(cart, bugs);
+    
+    for (let i = 0; i < cart.length; i++){
+        const lineItem = cart[i]; 
+        const bug = findByID(bugs, lineItem.id);
+        const lineTotal = calcLineItem(lineItem.quantity, bug.price); 
+        ordertTotal += lineTotal;
+    }
+    return roundCurrency(ordertTotal);
 }
