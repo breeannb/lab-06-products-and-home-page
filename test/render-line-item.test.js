@@ -1,5 +1,4 @@
 import { renderTableRow } from '../shopping-cart/render-line-items.js'; 
-// import bugs from '../data.js'; 
 import makeReadablePrice from '../shopping-cart/render-line-items.js';
 
 const test = QUnit.test;
@@ -31,7 +30,7 @@ test('renders a line item', function(assert) {
         quantity: 2, 
     }; 
 
-    const expected = '<tr><th class="table">Rhinoceros Beetle</th><th>2</th><th>$15.00</th><th>$30.00</th></tr>'; 
+    const expected = '<tr><td class="table">Rhinoceros Beetle</td><td>2</td><td>$15.00</td><td>$30.00</td></tr>'; 
     //Act 
     // Call the function you're testing and set the result to a const
     const dom = renderTableRow(cartItem, beetle); 

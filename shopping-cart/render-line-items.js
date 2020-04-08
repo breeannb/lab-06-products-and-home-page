@@ -8,27 +8,26 @@ export default function makeReadablePrice(price) { //in example, used this to cr
 export function renderTableRow(cartItem, bug) { 
     // make a table and place correlating info into sections 
     const tr = document.createElement('tr');
-    // const th = document.createElement('th');
 
-    const thItemName = document.createElement('th');
-    thItemName.textContent = bug.name;
-    thItemName.classList.add('table');
+    const tdItemName = document.createElement('td');
+    tdItemName.textContent = bug.name;
+    tdItemName.classList.add('table');
 
-    const thQuantity = document.createElement('th');
-    thQuantity.textContent = cartItem.quantity;
+    const tdQuantity = document.createElement('td');
+    tdQuantity.textContent = cartItem.quantity;
+  
+    const tdPrice = document.createElement('td');
+    tdPrice.textContent = makeReadablePrice(bug.price);
 
-    const thPrice = document.createElement('th');
-    thPrice.textContent = makeReadablePrice(bug.price);
-
-    const thTotal = document.createElement('th');
+    const tdTotal = document.createElement('td');
     const totalPrice = (bug.price * cartItem.quantity); 
-    thTotal.textContent = makeReadablePrice(totalPrice);
+    tdTotal.textContent = makeReadablePrice(totalPrice);
 
     // to place the information in the tr 
-    tr.appendChild(thItemName);   
-    tr.appendChild(thQuantity); 
-    tr.appendChild(thPrice);
-    tr.appendChild(thTotal);
+    tr.appendChild(tdItemName);   
+    tr.appendChild(tdQuantity); 
+    tr.appendChild(tdPrice);
+    tr.appendChild(tdTotal);
 
     return tr; 
 } 

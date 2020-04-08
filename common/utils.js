@@ -12,7 +12,6 @@ export default function findByID(arrayOfThings, id){
     //first item found that has an .id property that matches the passed in id. Also turn null if no match is found
     return null; 
 }
-
 export function calcLineItem(quantity, price){ 
     let lineTotal = quantity * price;
     let roundTotal = Math.round(lineTotal * 100) / 100;

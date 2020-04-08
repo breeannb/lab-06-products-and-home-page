@@ -2,15 +2,15 @@
 import { renderTableRow } from './render-line-items.js'; 
 import bugs from '../data.js'; 
 // import makeReadablePrice from '../shopping-cart/render-line-items.js';
-import cart from '../data.js'; 
+import cart from '../data/cart.js'; 
 import findByID from '../common/utils.js';
 
 const tbody = document.getElementById('tbody');
 
-
 for (let i = 0; i < cart.length; i++) { 
     const cartItem = cart[i]; 
-    const bug = findByID(bugs, cartItem.id); 
+    const constItemId = cartItem.id;
+    const bug = findByID(bugs, constItemId); 
     const dom = renderTableRow(cartItem, bug); 
     tbody.appendChild(dom); 
 }
