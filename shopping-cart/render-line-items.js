@@ -25,9 +25,6 @@ export function renderTableRow(cartItem, bug) {
     const totalPrice = (bug.price * cartItem.quantity); 
     thTotal.textContent = makeReadablePrice(totalPrice);
 
-    // Give the tr a class 
-    tr.classList.add('table'); 
-
     // to place the information in the tr 
     tr.appendChild(thItemName);   
     tr.appendChild(thQuantity); 
