@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../common/main.css">
+    <title>Shopping Cart: Entomology</title>
+</head>
+
+<body>
+    <header> 
+        <h1>Entomology: Bugs for Pinnings</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../products.html">Shop</a>
+            <a href="./shopping-cart.html">Shopping Cart</a>
+            <a href="./product-entry.html">Want to Add a New Product?</a>
+        </nav>
+    </header>
+</body>
+
+<!-- id: 'mantis',
+    name: 'Mantis',
+    image: './assets /mantis.jpg',
+    description: 'A description of the Praying Mantis',
+    category: 'bug-mantis',
+    price: 5.00,  -->
+<main>
+    <form id="new-product-form"> 
+        <label >ID:</label>
+        <input id="id" name="id"/> 
+        <label>Name:</label>
+        <input id="name" name="name"/>
+        <label>Image:</label>
+        <input id="image" name="image"/>
+        <label>Description:</label>
+        <input id="description" name="description"/>
+        <label>Category:</label>
+        <input id="category" name="category"/>
+        <label>Price:</label>
+        <input id="price" name="price"/>
+
+        <button>Submit</button>
+    </form>
+
+</main>
+
+<script type="module" src="add-inventory.js"></script>
+</html>
