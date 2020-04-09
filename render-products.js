@@ -19,7 +19,7 @@ export default function renderBug(bug) {
     button.value = bug.id;  
     
     // button Event Listener
-    button.addEventListener('click', function(){
+    button.addEventListener('click', () => {
         // retrieve existing shopping cart from localStorage. If no cart, we need an empty array. If there is, we need to turn it into a json.parse
         let cartInLocalStorage = localStorage.getItem('CART'); // set variable to cart in local storage
         let cart; //creating javascript cart 
@@ -32,17 +32,19 @@ export default function renderBug(bug) {
             cart = [];
         }
 
+        // Now that we have a cart, go find if we already have a bug that is the same kind
         let cartItem = findByID(cart, bug.id); 
 
-        if (!cartItem) {
-            const cartItem = {
+        // if findByID finds nothing of this type in the cart 
+        if (cartItem) { // cart item is the bug id and the quantity 
+            const cartItem = { // bug passed as a parameter 
                 id: bug.id,
                 quantity: 1
             };
 
-            cart.push(cartItem); 
+            cart.push(cartItem); // push item into cart 
         } else 
-            cartItem.quantity++; 
+            cartItem.quantity++; // if there is a cart item, add another to the quantity 
 
         //stringify our shopping cart 
         const stringCart = JSON.stringify(cart);
@@ -59,7 +61,7 @@ export default function renderBug(bug) {
     li.appendChild(img); 
     li.appendChild(description);  
     li.appendChild(price); 
-    li.append(button);
+    li.appendChild(button);
 
     return li; 
 }

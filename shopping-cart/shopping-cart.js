@@ -8,6 +8,9 @@ import findByID, { calcOrderTotal, toUSD } from '../common/utils.js';
 const tbody = document.getElementById('tbody');
 const orderTotalCell = document.getElementById('order-total-cell');
 
+
+
+
 for (let i = 0; i < cart.length; i++) { 
     const cartItem = cart[i]; 
     const constItemId = cartItem.id;
