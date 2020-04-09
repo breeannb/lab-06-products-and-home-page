@@ -9,7 +9,15 @@ const tbody = document.getElementById('tbody');
 const orderTotalCell = document.getElementById('order-total-cell');
 
 
-
+const cartInLocalStorage = localStorage.getItem('CART'); 
+const cart; 
+// if there is a cart in local storage 
+if (cartInLocalStorage) { 
+    cart = JSON.parse(cartInLocalStorage);
+}
+else {
+    cart = [];
+}
 
 for (let i = 0; i < cart.length; i++) { 
     const cartItem = cart[i]; 
@@ -20,3 +28,17 @@ for (let i = 0; i < cart.length; i++) {
 }
 const orderTotal = calcOrderTotal(cart, bugs); 
 orderTotalCell.textContent = toUSD(orderTotal);
+
+
+// if the cart is empty 
+if (cart.length === 0)  {
+    placeOrderButton.disabled = true; 
+}
+else { 
+    //if there is something in the cart, add event listener to order button
+    placeOrderButton.addEventListener('click', () =>{
+        localStorage.removeItem('CART'); 
+        alert('Order placed:\n' + JSON.stringify(cart, true, 2));
+        window.location = '../'; 
+    });
+}

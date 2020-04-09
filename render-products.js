@@ -51,6 +51,9 @@ export default function renderBug(bug) {
         // put string cart in local storage 
         localStorage.setItem('CART', stringCart); 
 
+        //tell user we added one 
+        alert('1 ' + bug.name + ' added to cart');
+
     });
 
      // Give the li a class 
