@@ -31,8 +31,6 @@ export function roundCurrency(lineTotal) {
 export function calcOrderTotal(cart, bugs) { 
     // variable to hold order total 
     let ordertTotal = 0; 
-
-    console.log(cart, bugs);
     
     for (let i = 0; i < cart.length; i++){
         const lineItem = cart[i]; 
