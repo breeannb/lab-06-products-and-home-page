@@ -32,16 +32,20 @@ const orderTotal = calcOrderTotal(cart, bugs);
 orderTotalCell.textContent = toUSD(orderTotal);
 
 
-// // if the cart is empty 
-// if (cart.length === 0)  {
-//     placeOrderButton.disabled = true; 
-// }
-// else { 
-//     //if there is something in the cart, add event listener to order button
-//     placeOrderButton.addEventListener('click', () =>{
-//         localStorage.removeItem('CART'); 
-//         alert('Order placed:\n' + JSON.stringify(cart, true, 2));
-//         window.location = '../'; 
-//     });
+// Place Order Button 
 
-// }
+const placeOrderButton = document.getElementById('place-order-button');
+
+// if the cart is empty 
+if (cart.length === 0) {
+    placeOrderButton.disabled = true; // disable the place order button if cart is empty 
+}
+else { 
+    //if there is something in the cart, add event listener to place order button 
+    placeOrderButton.addEventListener('click', () =>{
+        localStorage.removeItem('CART');  // when this button is clicked, remove the cart from the LocalStorage
+        alert('Order placed:\n' + JSON.stringify(cart, true, 2)); //alert that displays the contents of the cart 
+        window.location = '../'; //send the user to homepage
+    });
+
+}
