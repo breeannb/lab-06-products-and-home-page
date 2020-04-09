@@ -36,13 +36,13 @@ export default function renderBug(bug) {
         let cartItem = findByID(cart, bug.id); 
 
         // if findByID finds nothing of this type in the cart 
-        if (cartItem) { // cart item is the bug id and the quantity 
-            const cartItem = { // bug passed as a parameter 
+        if (!cartItem) { // cart item is the bug id and the quantity 
+            const newItem = { // bug passed as a parameter 
                 id: bug.id,
                 quantity: 1
             };
 
-            cart.push(cartItem); // push item into cart 
+            cart.push(newItem); // push item into cart 
         } else 
             cartItem.quantity++; // if there is a cart item, add another to the quantity 
 
